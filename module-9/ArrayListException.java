@@ -49,19 +49,14 @@ public class ArrayListException {
             // ask user for input
             System.out.println("Which element would you like to see again(0-14): ");
 
-            
-            // int userInput;
-
             // while loop to get user input and then use try/catch for exceptions
             while (true) {
                 try {
                     // create variable for user input
                     int userInput = myScanner.nextInt();
-                    if (userInput >= 0)
+                    if (userInput >= 0 && userInput < arrList.size())
                         System.out.println(arrList.get(userInput));
-                    else if (userInput <= arrList.size())
-                        System.out.println(arrList.get(userInput));
-                                 
+                    else throw new IndexOutOfBoundsException();                                 
                 }
                 catch (InputMismatchException | IndexOutOfBoundsException e) {
                     System.out.println("An Exception has been thrown displaying Out of Bounds");
