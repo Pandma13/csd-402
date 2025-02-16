@@ -19,28 +19,28 @@ import java.util.*;
 public class ArrayListException {
 
     public static void main(String[] args) {
-        // create an arraylist with only 10 string elements
-        ArrayList<String> arrListTen = new ArrayList<> (10);
+        // create an arraylist with 10 initial string elements
+        ArrayList<String> arrList = new ArrayList<> (10);
 
         // add strings to arraylist
-        arrListTen.add("Hedgehog");
-        arrListTen.add("Bat");
-        arrListTen.add("Hippopotamus");
-        arrListTen.add("Otter");
-        arrListTen.add("Peacock");
-        arrListTen.add("Racoon");
-        arrListTen.add("Elephant");
-        arrListTen.add("Llama");
-        arrListTen.add("Albatross");
-        arrListTen.add("Cheetah");
-        arrListTen.add("Arctic Fox");
-        arrListTen.add("Giant Panda");
-        arrListTen.add("Lizard");
-        arrListTen.add("Octopus");
-        arrListTen.add("Chameleon");
+        arrList.add("Hedgehog");
+        arrList.add("Bat");
+        arrList.add("Hippopotamus");
+        arrList.add("Otter");
+        arrList.add("Peacock");
+        arrList.add("Racoon");
+        arrList.add("Elephant");
+        arrList.add("Llama");
+        arrList.add("Albatross");
+        arrList.add("Cheetah");
+        arrList.add("Arctic Fox");
+        arrList.add("Giant Panda");
+        arrList.add("Lizard");
+        arrList.add("Octopus");
+        arrList.add("Chameleon");
 
         // print elements of arraylist
-        for (String a : arrListTen) {
+        for (String a : arrList) {
             System.out.println(a);
         }
         
@@ -49,19 +49,25 @@ public class ArrayListException {
             // ask user for input
             System.out.println("Which element would you like to see again(0-14): ");
 
-            // create variable for user input
-            int userInput;
+            
+            // int userInput;
 
             // while loop to get user input and then use try/catch for exceptions
             while (true) {
-                try {userInput = myScanner.nextInt();}
-                    catch (IndexOutOfBoundsException | InputMismatchException e) {userInput = 0;}
-                    System.out.println(arrListTen.get(userInput));
-
-                if (userInput >= 15) {
-                    System.out.println("An Exception has been thrown displaying Out of Bounds");
+                try {
+                    // create variable for user input
+                    int userInput = myScanner.nextInt();
+                    if (userInput >= 0)
+                        System.out.println(arrList.get(userInput));
+                    else if (userInput <= arrList.size())
+                        System.out.println(arrList.get(userInput));
+                                 
                 }
-            }
+                catch (InputMismatchException | IndexOutOfBoundsException e) {
+                    System.out.println("An Exception has been thrown displaying Out of Bounds");
+                    break;
+                }
+            } 
         }
     }
 }
