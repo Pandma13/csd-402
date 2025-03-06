@@ -25,19 +25,27 @@
 public class YearlyServiceFeesTest {
     public static void main(String[]args) {
         YearlyServiceFees.yearlyService();
-
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService() + ".00.");
+        
         YearlyServiceFees.yearlyService();
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService() + ".00.");
 
-        YearlyServiceFees.yearlyService(45.00);
+        YearlyServiceFees.yearlyService(45);
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService(45) + ".00.");
 
-        YearlyServiceFees.yearlyService(125.00);
+        YearlyServiceFees.yearlyService(125);
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService(125) + ".00.");
 
-        YearlyServiceFees.yearlyService(50.00, 30.00);
+        YearlyServiceFees.yearlyService(50, 30);
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService(50, 30) + ".00.");
 
-        YearlyServiceFees.yearlyService(100.00, 75.00);
+        YearlyServiceFees.yearlyService(100, 75);
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService(100, 75) + ".00.");
 
-        YearlyServiceFees.yearlyService(60.00, 50.00, 25.00);
+        YearlyServiceFees.yearlyService(60, 50, 25);
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService(60, 50, 25) + ".00.");
 
-        YearlyServiceFees.yearlyService(125.00, 20.00, 50.00);
+        YearlyServiceFees.yearlyService(125, 20, 50);
+        System.out.println("The total yearly service charge is $" + YearlyServiceFees.yearlyService(125, 20, 50) + ".00.");
     }
 }

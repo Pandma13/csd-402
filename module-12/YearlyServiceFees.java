@@ -24,38 +24,38 @@
 
 
 public class YearlyServiceFees {
-    static double serviceFee = 99.00;
+    static int serviceFee = 99;
 
-    public static double yearlyService() {
-        double yearlyServiceFee = serviceFee;
-
-        return yearlyServiceFee;
-    }
-
-    public static double yearlyService(double oilChange) {
-        double oilChangeFee = oilChange;
-
-        double yearlyServiceFee = serviceFee + oilChangeFee;
+    public static int yearlyService() {
+        int yearlyServiceFee = serviceFee;
 
         return yearlyServiceFee;
     }
 
-    public static double yearlyService(double oilChange, double tireRotation) {
-        double oilChangeFee = oilChange;
-        double tireRotationFee = tireRotation;
+    public static int yearlyService(int oilChange) {
+        int oilChangeFee = oilChange;
 
-        double yearlyServiceFee = serviceFee + oilChangeFee + tireRotationFee;
+        int yearlyServiceFee = serviceFee + oilChangeFee;
 
         return yearlyServiceFee;
     }
 
-    public static double yearlyService(double oilChange, double tireRotation, double coupon) {
-        double oilChangeFee = oilChange;
-        double tireRotationFee = tireRotation;
-        double couponDiscount = coupon;
+    public static int yearlyService(int oilChange, int tireRotation) {
+        int oilChangeFee = oilChange;
+        int tireRotationFee = tireRotation;
 
-        double yearlyServiceFee = serviceFee + oilChangeFee + tireRotationFee;
-        double discountedYearlyServiceFee = yearlyServiceFee - couponDiscount;
+        int yearlyServiceFee = serviceFee + oilChangeFee + tireRotationFee;
+
+        return yearlyServiceFee;
+    }
+
+    public static int yearlyService(int oilChange, int tireRotation, int coupon) {
+        int oilChangeFee = oilChange;
+        int tireRotationFee = tireRotation;
+        int couponDiscount = coupon;
+
+        int yearlyServiceFee = serviceFee + oilChangeFee + tireRotationFee;
+        int discountedYearlyServiceFee = yearlyServiceFee - couponDiscount;
 
         return discountedYearlyServiceFee;
     }
